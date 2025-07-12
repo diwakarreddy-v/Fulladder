@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fulladderdataflow(a,b,c,sum,carry);
+module fulladderdataflow(a,b,cin,sum,carry);
     input a;
     input b;
-    input c;
+    input cin;
     output sum;
     output carry;
-    assign sum=a^b^c;
-    assign carry=a&b|b&c|a&c;
+    assign sum=a^b^cin;
+    assign carry=a&b|b&cin|a&cin;
 endmodule;
 
